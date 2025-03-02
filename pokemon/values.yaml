@@ -1,0 +1,41 @@
+
+replicaCount: 1
+
+image:
+  repository: amarnath001/pokemon-api 
+  tag: latest
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: false
+
+ingress:
+  enabled: false
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+container:
+  name: pokemon
+  command: ["sleep", "infinity"]  
+
+
+service:
+  type: ClusterIP
+  port: 5000
+
+
+resources: {}
+
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: []
